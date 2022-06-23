@@ -6,7 +6,7 @@ const userindex = (req, res) => {
       res.render("index", { title: "users", data: result });
     })
     .catch((err) => {
-      console.log(err);
+      res.status(404).render("404", { title: "404" });
     });
 };
 const getuserdetails = (req, res) => {
@@ -16,11 +16,11 @@ const getuserdetails = (req, res) => {
       res.render("index", { title: "users", data: result });
     })
     .catch((err) => {
-      console.log(err);
+      res.status(404).render("404", { title: "404" });
     });
 };
 const deleteuser = (req, res) => {
-    const id = req.params.id;
+  const id = req.params.id;
   User.findByIdAndDelete(id)
     .then((result) => {
       res.json({ redirect: "/" });
@@ -28,25 +28,25 @@ const deleteuser = (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-}
+};
 const adduser = (req, res) => {
-    const userDetails = {
-        username: "maneesh950",
-        name: "maneesh",
-      };
-      const user = new User(req.body || userDetails);
-      user
-        .save()
-        .then((result) => {
-          res.send(result);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-}
+  const userDetails = {
+    username: "maneesh950",
+    name: "maneesh",
+  };
+  const user = new User(req.body || userDetails);
+  user
+    .save()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 module.exports = {
   userindex,
   getuserdetails,
   deleteuser,
-  adduser
+  adduser,
 };
