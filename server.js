@@ -1,9 +1,21 @@
 const http = require("http");
 const fs = require("fs");
+const _ = require("lodash");
 const server = http.createServer((req, res) => {
+  //lodash
+  const num = _.random(0, 20);
+
+  //set header
   res.setHeader("Content-Type", "text/html");
+  //routing
   let path = "./views/";
   switch (req.url) {
+    case "/random":
+      //   res.setHeader("Content-Type", "text/plain");
+      res.statusCode = 200;
+      res.write(num.toString());
+      res.end();
+      break;
     case "/":
       path += "index.html";
       res.statusCode = 200;
@@ -14,7 +26,7 @@ const server = http.createServer((req, res) => {
       break;
     case "/about-me":
       res.statusCode = 301;
-      res.setHeader('Location','/about');
+      res.setHeader("Location", "/about");
       res.end();
       break;
     default:
@@ -22,6 +34,7 @@ const server = http.createServer((req, res) => {
       res.statusCode = 404;
       break;
   }
+  //writing response
   //   res.write('<p>Maneesh</p>');
   //   res.write('<p>Maneesh</p>');
   //   res.end();
