@@ -1,4 +1,4 @@
-const User = require("./../models/user");
+const User = require("../models/user");
 const userindex = (req, res) => {
   User.find()
     // .sort({ createdAt : -1}) // sortby fieldname

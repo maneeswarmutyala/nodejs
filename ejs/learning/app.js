@@ -6,6 +6,7 @@ const app = express();
 const DB_URI =
   "mongodb+srv://<username>:<password>@nodejs.ej345.mongodb.net/?retryWrites=true&w=majority";
 
+
 //connecting and listening port
 mongoose
   .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -18,7 +19,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-
 //middleware
 app.use(morgan("dev"));
 app.use((req, res, next) => {
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//user routes 
+//user routes
 app.use(userRoutes);
 
 //routing
