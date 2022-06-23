@@ -1,0 +1,43 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin:0 auto;
+}
+.item {
+    box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, 0.2);
+    padding : 10px 30px;
+    margin-bottom: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+}
+.item > h2 {
+    text-transform: capitalize;
+    width: 80%;
+}
+.item > .info {
+    padding: 5px 10px;
+    background-color:rgb(7, 145, 199);
+    color: white;
+    letter-spacing: 2px;
+    height: fit-content;
+    border-radius: 10px;
+}
+.item > .success {
+    padding: 5px 10px;
+    background-color:rgb(31, 115, 3);
+    color: white;
+    letter-spacing: 2px;
+    height: fit-content;
+    border-radius: 10px;
+}
+button {
+ background-color:rgb(98, 21, 21);
+ padding: 5px 10px;
+ border: 1px solid rgb(98, 21, 21);
+ color: #fff;
+}

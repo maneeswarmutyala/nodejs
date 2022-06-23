@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head.ejs')  %>
+    <body>
+        <div class="container">
+            <h1>To do list</h1>
+                <% if (todos.length > 0) { %>
+                    <% todos.forEach(todo => { %>
+                        <div class="item">
+                            <h2><%= todo.title %> </h2>
+                            <span class=<%= todo.completed === true ? 'success' : 'info'  %>> <%= todo.completed === true ? 'Done' : 'Todo'  %> </span>
+                            <button>Delete</button>
+                        </div>
+                    <% }) %>
+                
+                <% }else{ %>
+                    <p>Not found any list. Please add new todo</p>
+                    <% } %>
+         
+        </div>
+    </body>
+</html>
