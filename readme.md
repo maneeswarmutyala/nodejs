@@ -25,7 +25,7 @@ Learnings:
 * Creating Node Js server
 * Creating multiple modules (import,export)
 * Learned about the some core modules like filesystem(fs), osmodule(os) and httpmodule(http)
-* Installing 3rd party modules/pacakges using npm
+* Installing 3rd party modules/packges using npm
 * Handling routes in node js server using http module
 * Sending html as response to the request using http module
 * Installing and creating Express server
