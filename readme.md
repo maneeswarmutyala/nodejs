@@ -14,12 +14,13 @@ cd [project_name]
 
 nodemon app
 
-Resources:
+**Resources:**
 
 1. https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU
 2. https://www.youtube.com/playlist?list=PLC3y8-rFHvwhco_O8PS1iS9xRrdVTvSIz
+3. **Quick overview:** https://www.youtube.com/watch?v=ENrzD9HAZK4&ab_channel=Fireship
 
-Learnings:
+**Learnings:**
 
 * Installing the node js in system
 * Creating Node Js server
